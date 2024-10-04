@@ -38,24 +38,39 @@ The **Google Drive Utility** is a Python application that integrates with Google
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/JamesBurchell/google-drive.git
-cd google-drive
+git clone https://github.com/JamesBurchell/interview_google_drive_utility.git
+cd interview_google_drive_utility/google_drive_util
 ```
 
-### 2. Install Dependencies
+### 2. Create virtual environment (optional)
+This is an optional, but recommend step.
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+### 3. Install Dependencies
 Ensure `pip` is installed and run:
 ```bash
 pip install -r requirements.txt
 ```
 *Note: ideally should run in a Python virtual environment.
 
-### 3. Google API Credentials
+### 4. Google API Credentials
 - Create a project in the [Google Cloud Console](https://console.cloud.google.com/).
-- Enable the **Google Drive API** for the project.
-- Create OAuth 2.0 credentials and download the `credentials.json` file.
+- Enable the [Google Drive API](https://developers.google.com/drive/api/quickstart/python#enable_the_api) for the project.
+- Configure [OAuth consent](https://developers.google.com/drive/api/quickstart/python#configure_the_oauth_consent_screen)
+- Create OAuth 2.0 [credentials](https://developers.google.com/drive/api/quickstart/python#authorize_credentials_for_a_desktop_application) 
+- Download the `credentials.json` file.
 - Place the `credentials.json` file in the project root directory.
 
-### 4. Run the Application
+### 5. Run tests (optional)
+Execute the main script:
+```bash
+pytest
+```
+
+### 6. Run the Application
 Execute the main script:
 ```bash
 python3 src/main.py
